@@ -80,7 +80,7 @@ border-radius: 30px 30px 30px 30px;
 .cta-form button {
 height: 80%;
 padding: 10 30px;
-background: #6415ff;
+background: #5315ff;
 color: white;
 border: none;
 border-radius: 90px 90px 90px 90px;
@@ -95,10 +95,11 @@ justify-content: start;
 align-items: start;
 width: 50%;
 }
-.customer-logos {
+.image {
 display: flex;
 justify-content: center;
 align-items: center;
+color: #5315ff;
 padding: 20px 0;
 margin: 20px 0;
 }
