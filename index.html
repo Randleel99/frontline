@@ -1,58 +1,178 @@
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index 2</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TReact — Beautiful React Templates</title>
+    <meta name="description"
+        content="Beautiful, customizable React templates — modular components and pages, fast, secure, with 24/7 support." />
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https:pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-aymec3yw5cvb3zcuhtoa93w35dytsvhlpvnys9esthfgjvovkxvfelgrogkvsg+p" crossorigin="anonymous" />
-    <script src="script.js"></script>
+
+    <!-- Minimal helper for screen-reader-only labels (kept local-friendly in case style.css doesn't include it) -->
+    <style>
+        .visually-hidden {
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+            border: 0;
+            padding: 0;
+            margin: -1px;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="row">
-        <nav class="nav">
+    <header class="row" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main">
             <div class="logo">
-                <img src="/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="" />
+                <img src="/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="TReact logo" width="48" height="48" />
                 <span class="logoTitle">TReact</span>
             </div>
-            <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Blog</a>
-                <a href="#">Pricing</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Login</a>
-                <a href="#" class="btn-signup">Sign Up</a>
+
+            <div class="nav-links" role="menubar" aria-label="Primary">
+                <a href="#" role="menuitem">Home</a>
+                <a href="#" role="menuitem">About Us</a>
+                <a href="#" role="menuitem">Blog</a>
+                <a href="#" role="menuitem">Pricing</a>
+                <a href="#" role="menuitem">Contact Us</a>
+                <a href="#" role="menuitem">Login</a>
+                <a href="#" class="btn-signup" role="menuitem">Sign Up</a>
             </div>
         </nav>
     </header>
 
-    <div class="row hero">
-        <div class="hero-content">
-            <h1>Beautiful React <br /><span>Templates for you.</span></h1>
-            <p>
-                Our templates are easy to setup, understand and customize. Fully
-                modular components with a variety of pages and components.
-            </p>
-            <div class="cta-form">
-                <input type="email" placeholder="Your E-mail Address" />
-                <button>Get Started</button>
-            </div>
-            <div class="trusted-customers">
-                <p>OUR TRUSTED CUSTOMERS</p>
-                <div class="customer-logos"></div>
-                <img src="/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="" />
-            </div>
-        </div>
-    </div>
+    <main>
+        <section class="row hero" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h1 id="hero-heading">
+                    Beautiful React
+                    <br />
+                    <span>Templates for you.</span>
+                </h1>
 
-    <div class="image">
-        <img src="/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="Hero Image"
-            style="width: 100%; height: 100%" />
-    </div>
-    </div>
+                <p class="hero-lead">
+                    Our templates are easy to set up, understand, and customize. Fully
+                    modular components with a variety of pages and components.
+                </p>
+
+                <form class="cta-form" action="#" method="post" aria-label="Subscribe to get started">
+                    <label for="email" class="visually-hidden">Email address</label>
+                    <input id="email" name="email" type="email" placeholder="Your e-mail address" required
+                        aria-required="true" />
+                    <button type="submit">Get Started</button>
+                </form>
+
+                <div class="trusted-customers" aria-hidden="false">
+                    <p class="muted">OUR TRUSTED CUSTOMERS</p>
+                    <div class="customer-logos">
+                        <img src="/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="Partner-logos" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="image" aria-hidden="false">
+                <img src="/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
+                    alt="Illustration showing product screenshot" style="width:100%;height:auto;display:block;" />
+            </div>
+        </section>
+
+        <section id="features" class="container" aria-labelledby="features-heading">
+            <div class="row_narrow">
+                <h2 id="features-heading">Features</h2>
+                <p>We offer the best services in the industry.</p>
+                <p>We have amazing service.</p>
+            </div>
+
+            <section id="quality" class="container" aria-label="Quality and features">
+                <!-- First row of features -->
+                <div class="row features-row">
+                    <div class="col-4">
+                        <div class="feature-box">
+                            <i class="fas fa-bolt fa-3x" aria-hidden="true"></i>
+                            <h3>Fast Performance</h3>
+                            <p>
+                                Experience lightning-fast load times and seamless navigation
+                                with our optimized templates.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="feature-box">
+                            <i class="fas fa-cogs fa-3x" aria-hidden="true"></i>
+                            <h3>Reliable Service</h3>
+                            <p>
+                                Consistently dependable and trustworthy. Being a reliable
+                                service provider is our top priority.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="feature-box">
+                            <i class="fas fa-shield-alt fa-3x" aria-hidden="true"></i>
+                            <h3>Secure</h3>
+                            <p>
+                                Built with security in mind to protect your data and user
+                                information.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second row of features -->
+                <div class="row features-row">
+                    <div class="col-4">
+                        <div class="feature-box">
+                            <i class="fas fa-headset fa-3x" aria-hidden="true"></i>
+                            <h3>24/7 Support</h3>
+                            <p>
+                                Continuous, round-the-clock assistance to customers, 365 days
+                                a year.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="feature-box">
+                            <i class="fas fa-smile fa-3x" aria-hidden="true"></i>
+                            <h3>Easy to Use</h3>
+                            <p>
+                                User-friendly templates and simplified solutions that are
+                                hassle-free.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="feature-box">
+                            <i class="fas fa-paint-brush fa-3x" aria-hidden="true"></i>
+                            <h3>Customizable</h3>
+                            <p>
+                                Pre-built professional designs that you can quickly
+                                personalize with your own content.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2026 TReact. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>
