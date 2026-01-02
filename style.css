@@ -130,7 +130,7 @@ width: 60%;
 }
 
 .hero-lead {
-  color:black
+  color: black;
   font-size: 18px;
   line-height: 1.6;
   max-width: 48rem;
@@ -198,31 +198,50 @@ font-size: 50px;
 font-family: 'Times New Roman', Times, serif;
 text-align: center;
 }
-
 .feature-box {
-  background: #ffffff;
-  border: 4px solid blue; 
-  padding: 20px;
-  border-radius: 8px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;  
+  gap: 12px;
+  padding: 16px;
+  border: 4px solid blue; 
+  border-radius: 8px;
+  background: #fff;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+}
+
+/* Icon to the left of the text */
+.feature-icon,
+.feature-box img {       
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;        
+  object-fit: contain;
+  display: block;
+  margin: 0;             
+}
+
+.feature-content {
+  flex: 1 1 auto;
 }
 
 .feature-box h3 {
-  margin: 0;
+  margin: 0 0 6px 0;
   font-size: 1.1rem;
-  text-align: center;
+  text-align: left;
   font-family: 'Times New Roman', Times, serif;
 }
-.feature-box pfeat { 
-display: grid;
- gap: 24px;
- margin: 0;
- color: #444;
- line-height: 1.5;
- text-align: center;
+.feature-box p {
+  margin: 0;
+  color: #444;
+  line-height: 1.5;
+  text-align: left;
 }
+
 #quality .features-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -231,29 +250,24 @@ display: grid;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border:color(blue; 4px);
-}
-#quality .col-4 {
-  box-sizing: border-box;
-  border: color blue 4px;
 }
 
-
-.feature-box:hover; {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-.feature-box img {
-    color: #007bff;
-    margin-bottom: 10px;
-}
 @media (max-width: 900px) {
   #quality .features-row {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 600px) {
   #quality .features-row {
     grid-template-columns: 1fr;
   }
+  .feature-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .feature-box h3,
+  .feature-box p {
+    text-align: center;
+  }
+}
