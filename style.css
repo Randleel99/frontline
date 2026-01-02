@@ -21,13 +21,14 @@ text-align: center;
 padding: 23px 20px 12px 20px;
 border: solid blue 5px;
 margin-top: 12px;
-}
+outline: 10px solid #dd4b11;  
+}    
 
 .nav .logo {
 display: flex;
 align-items: center;
 font-weight: 700;
-font-size: 24px;
+font-size: 30px;
 color: #243e63;
 }
 .nav .logo img {
