@@ -17,8 +17,9 @@ margin: 0 auto;;
 .nav {
 display: flex;
 justify-content: space-between;
+align-items: center;
 text-align: center;
-padding: 23px 20px 12px 20px;
+padding: 20px 0;
 border: solid blue 5px;
 margin-top: 12px;
 outline: 10px solid #dd4b11;  
@@ -61,7 +62,7 @@ border-radius: 20px;
 .hero {
 display: flex;
 padding: 60px 0;
-height: 400px;
+height: auto;
 width: 100%;
 gap: 20px;
 
@@ -147,7 +148,7 @@ width: 60%;
 .customer-logos img {
   display: inline-block;
   max-width: 475px;
-  width: 400%;
+  width: 100%;
   height: auto;
 }
 
@@ -197,59 +198,65 @@ margin-bottom: 10px
 font-size: 50px;
 font-family: 'Times New Roman', Times, serif;
 text-align: center;
+margin-top: 0;
 }
 .feature-box {
-  display: flex;
-  align-items: center;  
-  gap: 12px;
-  padding: 16px;
-  border: 4px solid blue; 
-  border-radius: 8px;
-  background: #fff;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 8px 16px;
+  align-items: start;
+  border: 4px solid blue;
 }
 
 .feature-box:hover {
   transform: scale(1.05);
 }
 
-/* Icon to the left of the text */
-.feature-icon,
-.feature-box img {       
-  width: 48px;
+.feature-icon {
+ align-items: center;
+  color: #5315ff;
+}
+
+.feature-box img {  
+ grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 28px;
   height: 48px;
-  flex: 0 0 48px;        
-  object-fit: contain;
-  display: block;
-  margin: 0;             
+  object-fit: contain;           
 }
 
 .feature-content {
-  flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .feature-box h3 {
-  margin: 0 0 6px 0;
-  font-size: 1.1rem;
-  text-align: left;
+    text-align: center;
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
   font-family: 'Times New Roman', Times, serif;
 }
 .feature-box p {
+  grid-column: 2;
+  grid-row: 2;
   margin: 0;
   color: #444;
-  line-height: 1.5;
-  text-align: left;
+  text-align: center;
+  
+  height: 100%; 
+  padding: auto;
 }
 
 #quality .features-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  align-items: start;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  align-items: stretch;
+  height: 100%;
 }
 
 @media (max-width: 900px) {
