@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-aymec3yw5cvb3zcuhtoa93w35dytsvhlpvnys9esthfgjvovkxvfelgrogkvsg+p" crossorigin="anonymous" />
-    <script src="app.js"></script>
     <style>
         .visually-hidden {
             position: absolute !important;
@@ -50,23 +49,25 @@
     <main>
         <section class="row hero" aria-labelledby="hero-heading">
             <div class="hero-content">
-                <h1 id="hero-heading">
-                    Beautiful React
-                    <br />
-                    <span>Templates for you.</span>
-                </h1>
+                <div class="hero-center">
+                    <h1 id="hero-heading">
+                        Beautiful React
+                        <br />
+                        <span>Templates for you.</span>
+                    </h1>
 
-                <p class="hero-lead">
-                    Our templates are easy to set up, understand, and customize. Fully
-                    modular components with a variety of pages and components.
-                </p>
+                    <p class="hero-lead">
+                        Our templates are easy to set up, understand, and customize. Fully
+                        modular components with a variety of pages and components.
+                    </p>
 
-                <form class="cta-form" action="#" method="post" aria-label="Subscribe to get started">
-                    <label for="email" class="visually-hidden">Email address</label>
-                    <input id="email" name="email" type="email" placeholder="Your e-mail address" required
-                        aria-required="true" />
-                    <button type="submit">Get Started</button>
-                </form>
+                    <form class="cta-form" action="#" method="post" aria-label="Subscribe to get started">
+                        <label for="email" class="visually-hidden">Email address</label>
+                        <input id="email" name="email" type="email" placeholder="Your e-mail address" required
+                            aria-required="true" />
+                        <button type="submit">Get Started</button>
+                    </form>
+                </div>
 
                 <div class="trusted-customers" aria-hidden="false">
                     <p class="muted">OUR TRUSTED CUSTOMERS</p>
@@ -78,7 +79,7 @@
 
             <div class="image" aria-hidden="false">
                 <img src="/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
-                    alt="Illustration showing product screenshot" style="width:100%;height:auto;display:block;" />
+                    alt="Illustration showing product screenshot" />
             </div>
         </section>
 
@@ -90,17 +91,18 @@
             </div>
 
             <section id="quality" class="container" aria-label="Quality and features">
-                <!-- First row of features -->
-                <div class="row features-row">
+                <!-- Responsive feature grid -->
+                <div class="features-row">
                     <div class="col-4">
                         <div class="feature-box">
                             <i class="fas fa-bolt fa-3x" aria-hidden="true"></i>
                             <h3>Fast Performance</h3>
+                            <img src="/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg" alt="fast" />
                             <p>
                                 Experience lightning-fast load times and seamless navigation
                                 with our optimized templates.
                             </p>
-                            <img src="/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg" alt=" fast" />
+
                         </div>
                     </div>
 
@@ -108,38 +110,24 @@
                         <div class="feature-box">
                             <i class="fas fa-cogs fa-3x" aria-hidden="true"></i>
                             <h3>Reliable Service</h3>
+                            <img src="/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg" alt="reliable" />
                             <p>
                                 Consistently dependable and trustworthy. Being a reliable
                                 service provider is our top priority.
                             </p>
-                            <img src="/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg" alt=" reliable" />
+
                         </div>
                     </div>
-
                     <div class="col-4">
                         <div class="feature-box">
                             <i class="fas fa-shield-alt fa-3x" aria-hidden="true"></i>
                             <h3>Secure</h3>
+                            <img src="/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg" alt="secure" />
                             <p>
                                 Built with security in mind to protect your data and user
                                 information.
                             </p>
-                            <img src="shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg" alt=" secure" />
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Second row of features -->
-                <div class="row features-row">
-                    <div class="col-4">
-                        <div class="feature-box">
-                            <i class="fas fa-headset fa-3x" aria-hidden="true"></i>
-                            <h3>24/7 Support</h3>
-                            <p>
-                                Continuous, round-the-clock assistance to customers, 365 days
-                                a year.
-                            </p>
-                            <img src="support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg" alt=" support" />
                         </div>
                     </div>
 
@@ -147,36 +135,197 @@
                         <div class="feature-box">
                             <i class="fas fa-smile fa-3x" aria-hidden="true"></i>
                             <h3>Easy to Use</h3>
+                            <img src="/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg" alt="easy" />
                             <p>
                                 User-friendly templates and simplified solutions that are
                                 hassle-free.
                             </p>
-                            <img src="simple-icon.673b7e1750b2a4ef32907fc164828d00.svg" alt=" simple" />
+
                         </div>
                     </div>
 
                     <div class="col-4">
                         <div class="feature-box">
-                            <img src="customize-icon.367468c90fd796009b97fbfba67b2c6a.svg" alt=" customize" />
                             <h3>Customizable</h3>
+                            <img src="/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg" alt="customizable" />
                             <p>
-                                Pre-built professional designs that you can quickly personalize with
-                                your own content, images, and branding.
+                                Pre-built professional designs that you can quickly personalize
                             </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="feature-box">
+                            <i class="fas fa-headset fa-3x" aria-hidden="true"></i>
+                            <h3>24/7 Support</h3>
+                            <img src="/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg" alt="support" />
+                            <p>
+                                Continuous, round-the-clock assistance to customers, 365 days
+                                a year.
+                            </p>
+
                         </div>
                     </div>
                 </div>
             </section>
         </section>
-        <div class="row-two">
-            <p>
-                <span class="w w-1">Quality Work</span>
-                <span class="w w-2">Design & Development</span>
-                <span class="w w-3">by</span>
-                <span class="w w-4">Professionals</span>
-            </p>
-            </section>
-        </div>
+
+        <section class="container-two" aria-label="Quality work">
+            <div class="border-box1">
+                <p class="quality">Quality Work</p>
+                <p class="design-development">Design &amp; Development</p>
+                <p class="by">By Professionals</p>
+                <p class="professional-design">
+                    Our team of experienced designers and developers are dedicated to creating high-quality,
+                    visually appealing templates that meet the needs of our clients. Our products, graphic, and systems
+                    are created by professionals with specialized training, experience, and knowledge in design
+                    principles.
+                </p>
+            </div>
+
+            <div class="border-box2">
+                <img src="/hero-screenshot-1.40a097b525c2f8c9808e.png" alt="Product screenshot" />
+            </div>
+        </section>
+
+        <section class="container-three" aria-labelledby="steps-heading">
+            <div class="border-box3">
+                <img src="/hero-screenshot-1.40a097b525c2f8c9808e.png" alt="Product preview" />
+            </div>
+            <div class="border-box4">
+                <p class="steps" id="steps-heading">Steps</p>
+                <p class="steps-subtitle">Easy to get started.</p>
+                <ol class="steps-list">
+                    <li>
+                        <strong>01 Register</strong>
+                        <span>Create an account with us using Google or Facebook.</span>
+                    </li>
+                    <li>
+                        <strong>02 Download</strong>
+                        <span>Browse and download the templates that you like from the marketplace.</span>
+                    </li>
+                    <li>
+                        <strong>03 Run</strong>
+                        <span>Follow the instructions to set up and customize the template to your needs.</span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section class="container-four" aria-label="reasonable & flexible plans">
+            <div class="reasonable-flexible plans">
+                <p class="pricing">Pricing</p>
+                <p class="reasonable">Reasonable &amp; Flexible Plans</p>
+                <p class="plan discription">
+                    Plans offering different levels of service allowing users to select the features and support that
+                    fit their current needs. Our plans feature pay-as-you-go, costs scale directly with consumption,
+                    ensuring customers only pay for what they use.
+                </p>
+            </div>
+
+            <div class="pricing-grid" aria-label="pricing plans">
+                <article class="pricing-card">
+                    <h3 class="pricing-card__title">Personal</h3>
+                    <p class="pricing-card__price">$ 17.99<span>/monthly</span></p>
+                    <p class="pricing-card__desc">
+                    <h2>for individuals.</h2>
+                    </p>
+                    <ol class="pricing-card__features">
+                        <li>30 Templates</li>
+                        <li> 7 Landing Pages</li>
+                        <li>12 internal pages</li>
+                        <li> Basic assistance</li>
+                    </ol>
+                    <button class="pricing-card__btn" type="button">Buy Now</button>
+                </article>
+                <article class="pricing-card">
+                    <h3 class="pricing-card__title">Business</h3>
+                    <p class="pricing-card__price">$39.00<span>/monthly</span></p>
+                    <p class="pricing-card__desc">
+                    <h2> For Small Business</h2>
+                    </p>
+                    <ol class="pricing-card__features">
+                        <li>60 Templates</li>
+                        <li> 20 Landing Pages</li>
+                        <li> 15 internal pages</li>
+                        <li> Priority assistance</li>
+                    </ol>
+                    <button class="pricing-card__btn" type="button">Buy Now</button>
+                </article>
+                <article class="pricing-card">
+                    <h3 class="pricing-card__title">Enterprise</h3>
+                    <p class="pricing-card__price">$59<span>/monthly</span></p>
+                    <p class="pricing-card__desc">
+                    <h2>For Large companies</h2>
+                    </p>
+                    <ol class="pricing-card__features">
+                        <li>120 Templates</li>
+                        <li> 50 Landing Pages</li>
+                        <li> 25 internal pages</li>
+                        <li> Dedicated assistance</li>
+                    </ol>
+                    <button class="pricing-card__btn" type="button">Buy Now</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="bottom-row">
+            <div class="bottom-row-content">
+                <h2>Developers all over the world are happily using Treact.</h2>
+                <div class="bottom-row-actions">
+                    <button class="btn-get-started" type="button">Get Started</button>
+                    <button class="btn-contact-us" type="button">Contact Us</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="link-boxes" aria-label="Site sections">
+            <div class="link-box">
+                <h3>Main</h3>
+                <ol>
+                    <li>Blog</li>
+                    <li>FAQs</li>
+                    <li>Support</li>
+                    <li>About Us</li>
+                </ol>
+            </div>
+            <div class="link-box">
+                <h3>Products</h3>
+                <ol>
+                    <li>Log in</li>
+                    <li>Personal</li>
+                    <li>Business</li>
+                    <li>Team</li>
+                </ol>
+            </div>
+            <div class="link-box">
+                <h3>Press</h3>
+                <ol>
+                    <li>Press</li>
+                    <li>Logos</li>
+                    <li>Events</li>
+                    <li>Stories</li>
+                    <li>Office</li>
+                </ol>
+            </div>
+            <div class="link-box">
+                <h3>Team</h3>
+                <ol>
+                    <li>Careers</li>
+                    <li>Founders</li>
+                    <li>Culture</li>
+                    <li>Onboarding</li>
+                </ol>
+            </div>
+            <div class="link-box">
+                <h3>Legal</h3>
+                <ol>
+                    <li>GDPR</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms Of Service</li>
+                    <li>Disclaimers</li>
+                </ol>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
@@ -184,6 +333,10 @@
             <p>&copy; 2026 TReact. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="app.js"></script>
+
+    <footer class="print-footer">© 2026 TReact. All rights reserved.</footer>
 </body>
 
 </html>
