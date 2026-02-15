@@ -25,7 +25,6 @@
         }
     </style>
 </head>
-
 <body>
     <header class="row" role="banner">
         <nav class="nav" role="navigation" aria-label="Main">
@@ -34,7 +33,14 @@
                 <span class="logoTitle">TReact</span>
             </div>
 
-            <div class="nav-links" role="menubar" aria-label="Primary">
+            <button class="burger" type="button" aria-label="Toggle navigation" aria-controls="primary-nav"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div id="primary-nav" class="nav-links" role="menubar" aria-label="Primary">
                 <a href="#" role="menuitem">Home</a>
                 <a href="#" role="menuitem">About Us</a>
                 <a href="#" role="menuitem">Blog</a>
@@ -97,7 +103,7 @@
                         <div class="feature-box">
                             <i class="fas fa-bolt fa-3x" aria-hidden="true"></i>
                             <h3>Fast Performance</h3>
-                            <img src="/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg" alt="fast" />
+                            <img src="./fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg" alt="fast" />
                             <p>
                                 Experience lightning-fast load times and seamless navigation
                                 with our optimized templates.
@@ -404,8 +410,7 @@
     </footer>
 
     <script src="app.js"></script>
-
-    <footer class="print-footer">© 2026 TReact. All rights reserved.</footer>
+    
 </body>
 
 </html>
