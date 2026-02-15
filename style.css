@@ -48,11 +48,15 @@ body {
   font-weight: 700;
   color: var(--accent);
   position: absolute;
-  left: 4%;
+  left: 1px;
   top: 50%;
   transform: translateY(-50%);
 }
 .logo img { display:block; }
+.logo img {
+  width: 32px;
+  height: 32px;
+}
 
 .nav-links {
   display: flex;
@@ -333,6 +337,36 @@ font-weight: 300;
   overflow: hidden;
 }
 
+.value-row {
+  width: 94%;
+  max-width: var(--container-max);
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  align-items: center;
+}
+
+.value-box1,
+.value-box2 {
+  width: 100%;
+}
+
+.value-box2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.value {
+  margin: 0 0 8px;
+  text-align: center;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
 .border-box3,
 .border-box4 {
   background: #ffffff;
@@ -435,6 +469,51 @@ font-weight: 300;
   padding-bottom: 28px;
 }
 
+.value-subtitle {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  color: #0f172a;
+}
+.value-description {
+  margin: 0 0 16px;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.Affordable {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.value-quote {
+  margin: 0 0 16px;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.Mission {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.Mission + p,
+.Mission + .mission-text {
+  margin: 0;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.6;
+}
 .pricing-grid {
   margin-top: 20px;
   display: grid;
@@ -637,6 +716,72 @@ font-weight: 300;
 @media (max-width: 900px) {
   .pricing-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 4%;
+  }
+
+  .logo {
+    position: static;
+    transform: none;
+  }
+
+  .row.hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px 4%;
+  }
+
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .features-row {
+    grid-template-columns: 1fr;
+  }
+
+  .container-two,
+  .container-three,
+  .value-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pricing-grid {
+    grid-auto-flow: row;
+  }
+
+  .pricing-card {
+    padding: 16px;
+  }
+
+  .bottom-row {
+    padding: 20px;
+  }
+
+  .bottom-row-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-get-started,
+  .btn-contact-us {
+    width: 100%;
+  }
+
+  .link-boxes {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .link-box {
+    flex: 1 1 100%;
   }
 }
 
