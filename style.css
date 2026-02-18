@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #243e63;
 }
 :root {
   --container-max: 1200px;
@@ -14,18 +20,20 @@
 html,body { height:100%; }
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #0f172a;
   background: #f8fafc;
   line-height: 1.45;
   font-size: 16px;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .container {
-  width: 94%;
-  max-width: var(--container-max);
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
   padding: 24px 0;
 }
@@ -109,22 +117,19 @@ body {
 }
 
 .row.hero {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 95px;
-  align-items: stretch;
-  padding: 28px 4%;
-  max-width: 1200px;
-  margin: 0 auto 10px;
+  align-items: center;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 24px 4%;
+  justify-items: center;
 }
 .hero-content {
   height: 100%; 
   width: 100%;
   max-width: none;
-  padding: 24px;
-  border: 2px solid #f1f7f7;
-  border-radius: 12px;
-  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -195,13 +200,21 @@ font-weight: 300;
   justify-content: center;
 }
 .image img { 
-  width: 120%; 
-  height: 100%; 
+  max-width: 760px;
+  width: 1130px;
+  height: 813px; 
   display:block; 
-  border-radius: 12px; 
-  border: #ebf3f3 2px solid;
+  align-items: center;
+  justify-content: center;
 }
   
+.trusted-customers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 .trusted-customers .muted { 
   color: #0f172a; 
   font-weight: 500;
@@ -209,8 +222,14 @@ font-weight: 300;
   margin: 8px 0; 
   text-align: center;
 }
+.customer-logos {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .customer-logos img {
    max-width: 100%; 
+   width: 60%;
    height: auto; 
    display:block; 
   }
@@ -950,7 +969,7 @@ font-weight: 300;
 }
 
 @media (min-width: 900px) {
-  .row.hero { grid-template-columns: 1fr 520px; gap: 36px; }
+  .row.hero { grid-template-columns: 1fr 920px; gap: 36px; }
   .container-two { grid-template-columns: 1fr 1fr; padding: 0; }
 }
 
