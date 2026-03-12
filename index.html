@@ -12,6 +12,116 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
 
+    <style>
+        .get_started_img img {
+            margin: 0 auto;
+        }
+
+        .values_subtitle {
+            margin: 16px 0px 32px 0px;
+        }
+
+        /*small screen*/
+        @media (max-width: 540px) {
+            .call_to_action button {
+                width: 100%;
+                padding: 16px 0;
+                margin-bottom: -21%;
+                line-height: 1.5;
+            }
+        }
+
+        /*Medium Screen*/
+        @media (max-width: 720px) {
+            .hero_img img {
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .call_to_action {
+                width: 500px;
+                max-width: 100%;
+                height: 68px;
+                flex-direction: column;
+            }
+
+            .call_to_action input {
+                padding: 16px 0;
+                padding-left: 32px;
+                line-height: 1.5;
+            }
+
+            .call_to_action button {
+                width: 100%;
+                padding: 16px 0;
+                margin-bottom: -58px;
+                line-height: 1.5;
+            }
+
+            .trusted_customers {
+                margin-top: 30%;
+            }
+        }
+
+        /*large screen*/
+        @media (max-width: 960px) {}
+
+        @media (max-width: 1024px) {
+            .hero_section {
+                flex-direction: column;
+                /* padding: 40px 0; */
+                margin: 0 auto;
+                max-width: 600px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero_title {
+                font-size: 30px;
+            }
+
+            .hero_img img {
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .pricing_cards {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .pricing_card_personal,
+            .pricing_card_business,
+            .pricing_card_enterprise {
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 4%;
+            }
+
+            .pricing_card_personal,
+            .pricing_card_business,
+            .pricing_card_enterprise {
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 4%;
+            }
+
+            .pricing_card_personal,
+            .pricing_card_business,
+            .pricing_card_enterprise {
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 4%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {}
+
+        @media (min-width: 480px) {}
+    </style>
 </head>
 
 <body>
@@ -38,42 +148,46 @@
     </header>
 
     <!----Hero Section-->
-    <section class="row hero_section">
-        <div class="hero_content">
-            <h6 class="hero_title">
-                Beautiful React Templates <span class="inner_title">for you</span>
-            </h6>
-            <p class="hero_desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-                voluptate, doloremque, quisquam, alias deleniti corporis consequatur
-                cumque magnam sed.
-            </p>
+    <section class="row">
+        <div class="hero_section">
+            <div class="hero_content">
+                <h6 class="hero_title">
+                    Beautiful React Templates <span class="inner_title">for you</span>
+                </h6>
+                <p class="hero_desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    voluptate, doloremque, quisquam, alias deleniti corporis consequatur
+                    cumque magnam sed.
+                </p>
 
-            <!--starting call to action -->
-            <div class="call_to_action">
-                <input type="email" name="email" id="email" placeholder="Your E-mail Address" />
-                <button>Get Started</button>
+                <!--starting call to action -->
+                <div class="call_to_action">
+                    <input type="email" name="email" id="email" placeholder="Your E-mail Address" />
+                    <button>Get Started</button>
+                </div>
+                <!--ending call to action -->
+
+                <!--starting trusted customer-->
+
+                <div class="trusted_customers">
+                    <h4>OUR TRUSTED CUSTOMERS</h4>
+                    <img src="customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="" class="customers_logos" />
+                </div>
+
+                <!--Ending trusted customer-->
             </div>
-            <!--ending call to action -->
-
-            <!--starting trusted customer-->
-
-            <div class="trusted_customers">
-                <h4>OUR TRUSTED CUSTOMERS</h4>
-                <img src="customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="" class="customers_logos" />
+            <div class="hero_img">
+                <img src="design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="" />
             </div>
-
-            <!--Ending trusted customer-->
-        </div>
-        <div class="hero_img">
-            <img src="design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="" />
         </div>
     </section>
 
     <!--feature section-->
     <section class="row_feature_section">
         <h6 class="feature_title">Features</h6>
-        <h1 class="feature_subtitle"> We have Amazing <span class="inner_title">Services</span></h1>
+        <h1 class="feature_subtitle">
+            We have Amazing <span class="inner_title">Services</span>
+        </h1>
         <p class="feature_desc">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
             voluptate, doloremque, quisquam, alias deleniti corporis consequatur
@@ -85,51 +199,58 @@
         <section class="feature_cards row">
             <div class="feature_cards_row">
                 <div class="feature_card">
-                    <img class="shield_img" src="./shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
+                    <img class="feature_icon" src="./shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
                         alt="shield shield-icon" />
                     <h4 class="feature_card_title">Secure</h4>
                     <p class="feature_card_desc">
-                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis
+                        nostrud.
                     </p>
                 </div>
                 <div class="feature_card2">
-                    <img class="support_img" src="./support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
+                    <img class="feature_icon" src="./support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
                         alt="support icon" />
                     <h4 class="feature_card_title">24/7 Support</h4>
                     <p class="feature_card_desc">
-                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis
+                        nostrud.
                     </p>
                 </div>
                 <div class="feature_card3">
-                    <img class="fast_img" src="fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg" alt="fast icon" />
+                    <img class="feature_icon" src="fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg" alt="fast icon" />
                     <h4 class="feature_card_title">Fast</h4>
                     <p class="feature_card_desc">
-                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis
+                        nostrud.
                     </p>
                 </div>
             </div>
             <div class="feature_cards_row">
                 <div class="feature_card4">
-                    <img class="customizable_img" src="./customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
+                    <img class="feature_icon" src="./customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
                         alt="customizable icon" />
                     <h4 class="feature_card_title">Customizable</h4>
                     <p class="feature_card_desc">
-                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis
+                        nostrud.
                     </p>
                 </div>
                 <div class="feature_card5">
-                    <img class="easy_img" src="./simple-icon.673b7e1750b2a4ef32907fc164828d00.svg" alt="easy icon" />
+                    <img class="feature_icon" src="./simple-icon.673b7e1750b2a4ef32907fc164828d00.svg"
+                        alt="easy icon" />
                     <h4 class="feature_card_title">Easy</h4>
                     <p class="feature_card_desc">
-                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis
+                        nostrud.
                     </p>
                 </div>
                 <div class="feature_card6">
-                    <img class="reliable_img" src="./reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
+                    <img class="feature_icon" src="./reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
                         alt="reliable icon" />
                     <h4 class="feature_card_title">Reliable</h4>
                     <p class="feature_card_desc">
-                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+                        Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis
+                        nostrud.
                     </p>
                 </div>
             </div>
@@ -139,100 +260,106 @@
 
     <!--starting quality work section-->
 
-    <section class="row quality_work">
-        <div class="quality_work_desc">
-            <h6 class="quality_work_title">Quality Work </h6>
-            <h1 class="quality_work_subtitle">Design & Developed by <span class="inner_title">Professionals.</span>
-            </h1>
-            <p class="quality_work_para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-                voluptate, doloremque, quisquam, alias deleniti corporis consequatur
-                cumque magnam sed.
-            </p>
-            <button class="quality_work_btn">Learn More</button>
-        </div>
-        <div class="quality_work_img">
-            <img src="./hero-screenshot-1.40a097b525c2f8c9808e.png" alt="" />
-            <svg viewBox="0 0 1280 1280" class="quality__grid" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <path id="line-of-balls-quality"
-                        d="M55 33.5C44.5 37 35 47.6 32.8 58.3c-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 33.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.4 25.5 19.4 4.1 39.5-14.2 37.5-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM1207 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5z">
-                    </path>
-                </defs>
-                <g transform="scale(0.5)">
-                    <use href="#line-of-balls-quality" transform="translate(0, 0)"></use>
-                    <use href="#line-of-balls-quality" transform="translate(0 100)"></use>
-                    <use href="#line-of-balls-quality" transform="translate(0, 200)"></use>
-                    <use href="#line-of-balls-quality" transform="translate(0, 300)"></use>
-                    <use href="#line-of-balls-quality" transform="translate(0, 400)"></use>
-                    <use href="#line-of-balls-quality" transform="translate(0, 500)"></use>
-                    <use href="#line-of-balls-quality" transform="translate(0, 600)"></use>
-                    <use href="#line-of-balls-quality" transform="translate(0, 700)"></use>
-                    <use href="#line-of-balls-quality" transform="translate(0, 800)"></use>
-                    <use href="#line-of-balls-quality" transform="translate(0, 900)"></use>
-                </g>
-            </svg>
+    <section class="row">
+        <div class="quality_work">
+            <div class="quality_work_desc">
+                <h6 class="quality_work_title">Quality Work</h6>
+                <h1 class="quality_work_subtitle">
+                    Design & Developed by
+                    <span class="inner_title">Professionals.</span>
+                </h1>
+                <p class="quality_work_para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                    voluptate, doloremque, quisquam, alias deleniti corporis consequatur
+                    cumque magnam sed.
+                </p>
+                <button class="quality_work_btn">Learn More</button>
+            </div>
+            <div class="quality_work_img">
+                <img src="./hero-screenshot-1.40a097b525c2f8c9808e.png" alt="" />
+                <svg viewBox="0 0 1280 1280" class="quality__grid" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <path id="line-of-balls-quality"
+                            d="M55 33.5C44.5 37 35 47.6 32.8 58.3c-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 33.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.4 25.5 19.4 4.1 39.5-14.2 37.5-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM1207 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5z">
+                        </path>
+                    </defs>
+                    <g transform="scale(0.5)">
+                        <use href="#line-of-balls-quality" transform="translate(0, 0)"></use>
+                        <use href="#line-of-balls-quality" transform="translate(0 100)"></use>
+                        <use href="#line-of-balls-quality" transform="translate(0, 200)"></use>
+                        <use href="#line-of-balls-quality" transform="translate(0, 300)"></use>
+                        <use href="#line-of-balls-quality" transform="translate(0, 400)"></use>
+                        <use href="#line-of-balls-quality" transform="translate(0, 500)"></use>
+                        <use href="#line-of-balls-quality" transform="translate(0, 600)"></use>
+                        <use href="#line-of-balls-quality" transform="translate(0, 700)"></use>
+                        <use href="#line-of-balls-quality" transform="translate(0, 800)"></use>
+                        <use href="#line-of-balls-quality" transform="translate(0, 900)"></use>
+                    </g>
+                </svg>
+            </div>
         </div>
     </section>
     <!--ending quality work section-->
 
-
-
     <!--starting steps to get started section-->
-    <section class="row get_started ">
-        <div class="get_started_img">
-            <img src="./hero-screenshot-2.241aac1fbc66db29d873.png" alt="" />
-            <svg viewBox="0 0 1280 1280" class="steps__grid" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <path id="line-of-balls"
-                        d="M55 33.5C44.5 37 35 47.6 32.8 58.3c-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 33.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.4 25.5 19.4 4.1 39.5-14.2 37.5-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM1207 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5z">
-                    </path>
-                </defs>
+    <section class="row">
+        <div class="get_started">
+            <div class="get_started_img">
+                <img src="./hero-screenshot-2.241aac1fbc66db29d873.png" alt="" />
+                <svg viewBox="0 0 1280 1280" class="steps__grid" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <path id="line-of-balls"
+                            d="M55 33.5C44.5 37 35 47.6 32.8 58.3c-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM183 33.5c-15.1 5-25.3 21.6-22.2 36.2 2.5 11.9 13.6 23 25.4 25.5 19.4 4.1 39.5-14.2 37.5-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM311 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM439 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM567 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM695 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM823 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM951 33.5c-10.5 3.5-20 14.1-22.2 24.8-4.3 20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 26-33.9-1.1-10.5-9-21.3-19-26.2-6.1-2.9-15.5-3.6-21.7-1.6zM1079 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5zM1207 33.5c-10.5 3.5-20 14.1-22.2 24.8-2.5 11.7 3.2 24.4 14.2 31.9 10.7 7.4 22.9 7.5 33.7.3 17.7-11.8 20.1-33.8 5.3-48.5-8.5-8.6-20.7-11.9-31-8.5z">
+                        </path>
+                    </defs>
 
-                <!-- Repeat the line 10 times -->
-                <g transform="scale(0.5)">
-                    <use href="#line-of-balls" transform="translate(0, 0)"></use>
-                    <use href="#line-of-balls" transform="translate(0, 100)"></use>
-                    <use href="#line-of-balls" transform="translate(0, 200)"></use>
-                    <use href="#line-of-balls" transform="translate(0, 200)"></use>
-                    <use href="#line-of-balls" transform="translate(0, 300)"></use>
-                    <use href="#line-of-balls" transform="translate(0, 400)"></use>
-                    <use href="#line-of-balls" transform="translate(0, 500)"></use>
+                    <!-- Repeat the line 10 times -->
+                    <g transform="scale(0.5)">
+                        <use href="#line-of-balls" transform="translate(0, 0)"></use>
+                        <use href="#line-of-balls" transform="translate(0, 100)"></use>
+                        <use href="#line-of-balls" transform="translate(0, 200)"></use>
+                        <use href="#line-of-balls" transform="translate(0, 200)"></use>
+                        <use href="#line-of-balls" transform="translate(0, 300)"></use>
+                        <use href="#line-of-balls" transform="translate(0, 400)"></use>
+                        <use href="#line-of-balls" transform="translate(0, 500)"></use>
+                    </g>
+                </svg>
+            </div>
+            <div class="get_started_content">
+                <h6 class="get_started_title">Steps</h6>
+                <h1 class="get_started_subtitle">
+                    Easy to<span class="inner_title"> Get Started</span>
+                </h1>
 
-                </g>
-            </svg>
-        </div>
-        <div class="get_started_content">
-            <h6 class="get_started_title">Steps </h6>
-            <h1 class="get_started_subtitle">Easy to<span class="inner_title"> Get Started</span></h1>
-
-
-            <div class="get_started_steps">
-                <div class="step_item">
-                    <div class="step_number">01</div>
-                    <div class="step_righter_item">
-                        <h3 class="step_title">Register</h3>
-                        <p class="step_desc">
-                            Create an account with us using Google or Facebook.
-                        </p>
+                <div class="get_started_steps">
+                    <div class="step_item">
+                        <div class="step_number">01</div>
+                        <div class="step_righter_item">
+                            <h3 class="step_title">Register</h3>
+                            <p class="step_desc">
+                                Create an account with us using Google or Facebook.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="step_item">
-                    <div class="step_number">02</div>
-                    <div class="step_righter_item">
-                        <h3 class="step_title">Download</h3>
-                        <p class="step_desc">
-                            Browse and Download the template that you like from the marketplace.
-                        </p>
+                    <div class="step_item">
+                        <div class="step_number">02</div>
+                        <div class="step_righter_item">
+                            <h3 class="step_title">Download</h3>
+                            <p class="step_desc">
+                                Browse and Download the template that you like from the
+                                marketplace.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="step_item">
-                    <div class="step_number">03</div>
-                    <div class="step_righter_item">
-                        <h3 class="step_title">Run</h3>
-                        <p class="step_desc">
-                            Follow the instructions to setup and customize the template to your needs.
-                        </p>
+                    <div class="step_item">
+                        <div class="step_number">03</div>
+                        <div class="step_righter_item">
+                            <h3 class="step_title">Run</h3>
+                            <p class="step_desc">
+                                Follow the instructions to setup and customize the template to
+                                your needs.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -244,12 +371,14 @@
     <section class="values_section row">
         <div class="values_content">
             <h6 class="values_title">VALUES</h6>
-            <h1 class="values_subtitle">We Always Abide by Our <span class="inner_title">Principles.</span>
+            <h1 class="values_subtitle">
+                We Always Abide by Our <span class="inner_title">Principles.</span>
             </h1>
             <p class="values_desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
             </p>
 
             <div class="values_cards">
@@ -266,7 +395,8 @@
                         <h3 class="value_card_title">Affordable</h3>
                     </div>
                     <p class="value_card_desc">
-                        We promise to offer you the best rate we can - at par with the industry standard.
+                        We promise to offer you the best rate we can - at par with the
+                        industry standard.
                     </p>
                 </div>
 
@@ -276,7 +406,8 @@
                         <h3 class="value_card_title">Professionalism</h3>
                     </div>
                     <p class="value_card_desc">
-                        We assure you that our templates are designed and created by professional designers.
+                        We assure you that our templates are designed and created by
+                        professional designers.
                     </p>
                 </div>
             </div>
@@ -293,10 +424,12 @@
     <section class="pricing_section row">
         <div class="pricing_header">
             <h6 class="pricing_title">PRICING</h6>
-            <h1 class="pricing_subtitle">Reasonable & Flexible <span class="inner_title">Plans.</span></h1>
+            <h1 class="pricing_subtitle">
+                Reasonable & Flexible <span class="inner_title">Plans.</span>
+            </h1>
             <p class="pricing_desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
         </div>
 
@@ -360,10 +493,13 @@
         <div class="testimonials_content">
             <div class="testimonials_header">
                 <h6 class="testimonials_title">TESTIMONIALS</h6>
-                <h1 class="testimonials_subtitle">Our Clients <span class="inner_title">Love Us.</span></h1>
+                <h1 class="testimonials_subtitle">
+                    Our Clients <span class="inner_title">Love Us.</span>
+                </h1>
                 <p class="testimonials_desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua enim ad minim veniam.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad
+                    minim veniam.
                 </p>
             </div>
 
@@ -377,11 +513,12 @@
                 </div>
                 <h3 class="testimonial_title">Amazing User Experience</h3>
                 <p class="testimonial_text">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem
-                    ipsum
-                    dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco.
                 </p>
                 <div class="testimonial_author">
                     <img class="author_img" src="./photo-1494790108377-be9c29b29330.avif" alt="Charlotte Hale" />
@@ -400,10 +537,12 @@
     <!--ending testimonials section-->
 
     <!--starting CTA section-->
-    <section class="cta_section">
-        <div class="cta_container row">
+    <section class="row">
+        <div class="cta_container">
             <div class="cta_content">
-                <p class="cta_text">Developers all over the world are happily using Treact.</p>
+                <p class="cta_text">
+                    Developers all over the world are happily using Treact.
+                </p>
                 <div class="cta_buttons">
                     <button class="cta_btn primary">Get Started</button>
                     <button class="cta_btn secondary">Contact Us</button>
@@ -470,37 +609,34 @@
             </div>
             <p class="footer_copyright">© 2018 Treact Inc. All Rights Reserved.</p>
             <div class="social_icons">
-                <a href="#" class="social_link"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-                <a href="#" class="social_link"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
-                <a href="#" class="social_link"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
+                <a href="#" class="social_link"><img src="assets/icons/facebook.svg" alt="Facebook" /></a>
+                <a href="#" class="social_link"><img src="assets/icons/twitter.svg" alt="Twitter" /></a>
+                <a href="#" class="social_link"><img src="assets/icons/youtube.svg" alt="YouTube" /></a>
             </div>
         </div>
     </footer>
     <!--ending footer-->
 
     <script>
-        const burgerMenu = document.getElementById('burgerMenu');
-        const navMenu = document.getElementById('navMenu');
+        const burgerMenu = document.getElementById("burgerMenu");
+        const navMenu = document.getElementById("navMenu");
 
         if (burgerMenu && navMenu) {
-            burgerMenu.addEventListener('click', function () {
-                burgerMenu.classList.toggle('active');
-                navMenu.classList.toggle('active');
+            burgerMenu.addEventListener("click", function () {
+                burgerMenu.classList.toggle("active");
+                navMenu.classList.toggle("active");
             });
 
-            const navLinks = document.querySelectorAll('.nav_link a');
+            const navLinks = document.querySelectorAll(".nav_link a");
 
-            navLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    burgerMenu.classList.remove('active');
-                    navMenu.classList.remove('active');
+            navLinks.forEach((link) => {
+                link.addEventListener("click", function () {
+                    burgerMenu.classList.remove("active");
+                    navMenu.classList.remove("active");
                 });
             });
         }
     </script>
-
 </body>
-
-
 
 </html>
